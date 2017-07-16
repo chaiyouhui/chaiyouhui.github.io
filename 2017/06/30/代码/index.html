@@ -135,106 +135,105 @@
 <div id="content-outer">
   <div id="content-inner">
     
+<article id="post">
+  <div class="post-page-title" style="background-color:#26A69A;background-image:url(https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=949051278,1523955622&amp;fm=58&amp;s=8980C5128F506CC85CEDC9C60200D0B3)" >
+  <h2>柴有辉-基于arduino的智能花盆移动传感控制模块的研究与实现-代码</h2>
+    
+  <p>作者:John Doe &nbsp&nbsp 发布于:<time datetime="2017-06-30T06:00:00.000Z">
+          2017-06-30
+    </time>
+  </p>
+    
+  </div>
+  <div class="post-page-content">
+  <p>int theLightValue[4] = {20};   //4个光照值<br>int theLightRange[2] = {200,500};  //光照的最佳范围</p>
+<p>void setup() {<br>  Serial.begin(9600);</p>
+<p>  //红外蔽障传感器接口<br>  pinMode(2,INPUT);<br>  pinMode(3,INPUT);</p>
+<p>  //控制l298n模块<br>  pinMode(5, OUTPUT);<br>  pinMode(6, OUTPUT);<br>  pinMode(7, OUTPUT);<br>  pinMode(8, OUTPUT);<br>}</p>
+<p>void loop() {</p>
+<pre><code>if(analogRead(A0) &lt; theLightRange[0] || analogRead(A0) &gt; theLightRange[1] )
+{
+    //控制移动部分
+    ControlMove();
+}
+
+delay(5000);
+</code></pre><p>}</p>
+<p>//控制移动部分<br>void ControlMove()<br>{</p>
+<pre><code>do
+{
+
+  //向前移动
+  while( digitalRead(2) == 0 &amp;&amp; digitalRead(3) == 1)
+  {
+
+       MoveForward();
+       delay(10);
+       Stop();
+       delay(30);
+
+    //当前光照适合时，跳出这个循环
+    if( analogRead(A0) &gt; theLightRange[0] &amp;&amp; analogRead(A0) &lt; theLightRange[1] )
+      break;
+  }
 
 
-<div class="tags">
-  
-</div>
+  //向后倒退一定的距离
+  MoveBack();
+  delay(50);
 
-<div id="recent-posts">
-  
-      <div class="recent-post-item lazy" style="background-color:#26A69A"  data-original="/images/random/vateral-13.png"  >
-        <a class="recent-post-link" href="/2017/07/16/hello-world/">
-        <div class="post-hover">
-          <!--title-->
-          <p class="post-title"><a href="/2017/07/16/hello-world/" >Hello World</a></p>
+  //转动90度到下一个方向
+  TurnHereEach();
 
-          <!--date-->
-          
-            <p class="post-time">John Doe &nbsp &nbsp 发布于:<time datetime="2017-07-16T14:40:58.214Z">
-              2017-07-16
-            </time>
-            </p>
-          
 
-          <!--tags-->
 
-          标签:
-            
-            暂无标签
-            
-          <!--分类-->
+  //转向
+  while( digitalRead(2) == 1 &amp;&amp; digitalRead(3) == 0)
+  {
 
-          分类:
-            
-            暂无分类
-            
+    TurnHereEach();
 
-          <!--excerpt-->
-          <div class="post-excerpt">
-            <p>
-              摘要：
-              
-                Welcome to Hexo! This is your very first post. Check 
-              
-            </p>
-          </div>
-          <div class="post-more"><a href="/2017/07/16/hello-world/" >全文阅读</a></div>
-        </div>
-        </a>
-      </div>
-  
-      <div class="recent-post-item lazy" style="background-color:#26A69A"   data-original="http://imgsrc.baidu.com/imgad/pic/item/b21c8701a18b87d6e5b7d73b0d0828381f30fd19.jpg"  >
-        <a class="recent-post-link" href="/2017/07/01/日记6.29/">
-        <div class="post-hover">
-          <!--title-->
-          <p class="post-title"><a href="/2017/07/01/日记6.29/" >上传失败</a></p>
+    //当前关照适合时，跳出这个循环
+    if( analogRead(A0) &gt; theLightRange[0] &amp;&amp; analogRead(A0) &lt; theLightRange[1] )
+      break;
+  }
 
-          <!--date-->
-          
-            <p class="post-time">John Doe &nbsp &nbsp 发布于:<time datetime="2017-07-01T13:55:10.000Z">
-              2017-07-01
-            </time>
-            </p>
-          
 
-          <!--tags-->
+}while( analogRead(A0) &lt; theLightRange[0] || analogRead(A0) &gt; theLightRange[1] );
+</code></pre><p>}</p>
+<p>//转动90度<br>void TurnHereEach()<br>{<br>  for( int i = 0; i &lt; 50; i ++ )<br>  {<br>    TurnHere();<br>    delay(10);<br>    Stop();<br>    delay(30);<br>  }<br>}</p>
+<p>// 前进<br>void MoveForward()<br>{<br>  digitalWrite(5,HIGH);<br>  digitalWrite(6,LOW);<br>  digitalWrite(7,LOW);<br>  digitalWrite(8,HIGH);<br>}<br>//原地转向<br>void TurnHere()<br>{<br>  digitalWrite(5,HIGH);<br>  digitalWrite(6,LOW);<br>  digitalWrite(7,HIGH);<br>  digitalWrite(8,LOW);<br>}<br>//后退<br>void MoveBack()<br>{<br>  digitalWrite(5,LOW);<br>  digitalWrite(6,HIGH);<br>  digitalWrite(7,HIGH);<br>  digitalWrite(8,LOW);<br>}<br>//停止移动<br>void Stop()<br>{<br>  digitalWrite(5,LOW);<br>  digitalWrite(6,LOW);<br>  digitalWrite(7,LOW);<br>  digitalWrite(8,LOW);<br>}</p>
 
-          标签:
-            
-            暂无标签
-            
-          <!--分类-->
+  </div>
+  <!--评论块-->
+    
 
-          分类:
-            
-            暂无分类
-            
+</article>
+<nav class="post-nav">
+  <!-- Prev Nav -->
+    
+  <a href="/2017/07/01/日记6.29/" id="post_nav-newer" class="post-nav-content prev-content">
+      新篇
+  </a>
+    
 
-          <!--excerpt-->
-          <div class="post-excerpt">
-            <p>
-              摘要：
-              
-                再次测试
 
-              
-            </p>
-          </div>
-          <div class="post-more"><a href="/2017/07/01/日记6.29/" >全文阅读</a></div>
-        </div>
-        </a>
-      </div>
-  
-  <nav class="paging">
-    <span class="page-number current">1</span>
+  <!-- Next Nav -->
+    
+  <a href="/2017/06/25/毕设/" id="post_nav-older" class="post-nav-content next-content">
+      旧篇
+  </a>
+    
 </nav>
+<div class="post-toc-btn"><i class="material-icons">format_list_numbered</i></div>
+<div class="post-toc-none"><p>(无)</p></div>
+<div class="post-toc-box">
+    
 </div>
-
-
-
-
-
+<!--<div class="post-back"><i class="material-icons">arrow_back</i></div>-->
+<script type="text/javascript">
+    menu();
+</script>
   </div>
 </div>
 <div id="bottom-outer">

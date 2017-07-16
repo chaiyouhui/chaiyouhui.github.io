@@ -135,106 +135,95 @@
 <div id="content-outer">
   <div id="content-inner">
     
+<article id="post">
+  <div class="post-page-title"  style="background-color:#26A69A;background-image:url(/images/random/vateral-10.png)" >
+  <h2>继承，封装，多态</h2>
+    
+  <p>作者:John Doe &nbsp&nbsp 发布于:<time datetime="2017-05-01T08:00:00.000Z">
+          2017-05-01
+    </time>
+  </p>
+    
+  </div>
+  <div class="post-page-content">
+  <p><strong>一、封装：</strong></p>
+<p>　　封装是实现面向对象程序设计的第一步，封装就是将数据或函数等集合在一个个的单元中（我们称之为类）。被封装的对象通常被称为抽象数据类型。 </p>
+<p><strong> 封装的意义：</strong>　　封装的意义在于保护或者防止代码（数据）被我们无意中破坏。在面向对象程序设计中数据被看作是一个中心的元素并且和使用它的函数结合的很密切，从而保护它不被其它的函数意外的修改。</p>
+<p>　　封装提供了一个有效的途径来保护数据不被意外的破坏。相比我们将数据（用域来实现）在程序中定义为公用的（public）我们将它们(fields)定义为私有的（privat）在很多方面会更好。私有的数据可以用两种方式来间接的控制。第一种方法，我们使用传统的存、取方法。第二种方法我们用属性（property）。</p>
+<p>　　使用属性不仅可以控制存取数据的合法性，同时也提供了“读写”、“只读”、“只写”灵活的操作方法。</p>
+<p>访问修饰符：</p>
+<blockquote>
+<p>Private:只有类本身能存取.<br>Protected:类和派生类可以存取.<br>Internal:只有同一个项目中的类可以存取.<br>Protected Internal:是Protected和Internal的结合.<br>Public:完全存取.</p>
+</blockquote>
+<p><strong> 二、继承：</strong></p>
+<p>　　继承主要实现重用代码，节省开发时间。</p>
+<p>１、C#中的继承符合下列规则：</p>
+<ol>
+<li><ol>
+<li>继承是可传递的。如果C从B中派生，B又从A中派生，那么C不仅继承了B中声明的成员，同样也继承了A中的成员。Object类作为所有类的基类。</li>
+<li>派生类应当是对基类的扩展。派生类可以添加新的成员，但不能除去已经继承的成员的定义。</li>
+<li>构造函数和析构函数不能被继承。除此之外的其它成员，不论对它们定义了怎样的访问方式，都能被继承。基类中成员的访问方式只能决定派生类能否访问它们。</li>
+<li>派生类如果定义了与继承而来的成员同名的新成员，就可以覆盖已继承的成员。但这并不因为这派生类删除了这些成员，只是不能再访问这些成员。</li>
+<li>类可以定义虚文法、虚属性以及虚索引指示器，它的派生类能够重载这些成员，从而实现类可以展示出多态性。</li>
+</ol>
+</li>
+</ol>
+<p>　　２、new关键字</p>
+<p>　　　如果父类中声明了一个没有friend修饰的protected或public方法，子类中也声明了同名的方法。则用new可以隐藏父类中的方法。（不建议使用）</p>
+<p>　　３、base关键字</p>
+<p>　　　base 关键字用于从派生类中访问基类的成员：</p>
+<ol>
+<li><ol>
+<li>调用基类上已被其他方法重写的方法。</li>
+<li>指定创建派生类实例时应调用的基类构造函数。</li>
+</ol>
+</li>
+</ol>
+<p><strong>三、多态</strong></p>
+<p>　　１、多态：同一操作作用于不同的对象，可以有不同的解释，产生不同的执行结果。在运行时，可以通过指向基类的指针，来调用实现派生类中的方法。</p>
+<p>　　编译时的多态性：<br>　　编译时的多态性是通过重载来实现的。对于非虚的成员来说，系统在编译时，根据传递的参数、返回的类型等信息决定实现何种操作。<br>　　运行时的多态性：<br>　　运行时的多态性就是指直到系统运行时，才根据实际情况决定实现何种操作。C#中，运行时的多态性通过虚成员实现。<br>　　编译时的多态性为我们提供了运行速度快的特点，而运行时的多态性则带来了高度灵活和抽象的特点。</p>
+<p> 　　２、实现多态：</p>
+<ol>
+<li><ol>
+<li>接口多态性。</li>
+<li>继承多态性。</li>
+<li>通过抽象类实现的多态性。</li>
+</ol>
+</li>
+</ol>
+<p>　　３、override关键字：</p>
+<p>　　　重写父类中的virtual修饰的方法，实现多态。</p>
+
+  </div>
+  <!--评论块-->
+    
+
+</article>
+<nav class="post-nav">
+  <!-- Prev Nav -->
+    
+  <a href="/2017/06/25/济世图/" id="post_nav-newer" class="post-nav-content prev-content">
+      新篇
+  </a>
+    
 
 
-<div class="tags">
-  
-</div>
-
-<div id="recent-posts">
-  
-      <div class="recent-post-item lazy" style="background-color:#26A69A"  data-original="/images/random/vateral-13.png"  >
-        <a class="recent-post-link" href="/2017/07/16/hello-world/">
-        <div class="post-hover">
-          <!--title-->
-          <p class="post-title"><a href="/2017/07/16/hello-world/" >Hello World</a></p>
-
-          <!--date-->
-          
-            <p class="post-time">John Doe &nbsp &nbsp 发布于:<time datetime="2017-07-16T14:40:58.214Z">
-              2017-07-16
-            </time>
-            </p>
-          
-
-          <!--tags-->
-
-          标签:
-            
-            暂无标签
-            
-          <!--分类-->
-
-          分类:
-            
-            暂无分类
-            
-
-          <!--excerpt-->
-          <div class="post-excerpt">
-            <p>
-              摘要：
-              
-                Welcome to Hexo! This is your very first post. Check 
-              
-            </p>
-          </div>
-          <div class="post-more"><a href="/2017/07/16/hello-world/" >全文阅读</a></div>
-        </div>
-        </a>
-      </div>
-  
-      <div class="recent-post-item lazy" style="background-color:#26A69A"   data-original="http://imgsrc.baidu.com/imgad/pic/item/b21c8701a18b87d6e5b7d73b0d0828381f30fd19.jpg"  >
-        <a class="recent-post-link" href="/2017/07/01/日记6.29/">
-        <div class="post-hover">
-          <!--title-->
-          <p class="post-title"><a href="/2017/07/01/日记6.29/" >上传失败</a></p>
-
-          <!--date-->
-          
-            <p class="post-time">John Doe &nbsp &nbsp 发布于:<time datetime="2017-07-01T13:55:10.000Z">
-              2017-07-01
-            </time>
-            </p>
-          
-
-          <!--tags-->
-
-          标签:
-            
-            暂无标签
-            
-          <!--分类-->
-
-          分类:
-            
-            暂无分类
-            
-
-          <!--excerpt-->
-          <div class="post-excerpt">
-            <p>
-              摘要：
-              
-                再次测试
-
-              
-            </p>
-          </div>
-          <div class="post-more"><a href="/2017/07/01/日记6.29/" >全文阅读</a></div>
-        </div>
-        </a>
-      </div>
-  
-  <nav class="paging">
-    <span class="page-number current">1</span>
+  <!-- Next Nav -->
+    
+  <a href="/2017/04/30/设计模式/" id="post_nav-older" class="post-nav-content next-content">
+      旧篇
+  </a>
+    
 </nav>
+<div class="post-toc-btn"><i class="material-icons">format_list_numbered</i></div>
+<div class="post-toc-none"><p>(无)</p></div>
+<div class="post-toc-box">
+    
 </div>
-
-
-
-
-
+<!--<div class="post-back"><i class="material-icons">arrow_back</i></div>-->
+<script type="text/javascript">
+    menu();
+</script>
   </div>
 </div>
 <div id="bottom-outer">

@@ -1,166 +1,650 @@
 <!DOCTYPE html>
-<html>
+<html lang="null">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   
-  <title>Archives: 2017 | Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2017/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+  <meta name="keywords" content="网站关键字">
+  <meta name="description" content="网站简介">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  <title>Hexo</title>
   
+    <!-- stylesheets list from config.yml -->
+    
+      <link rel="stylesheet" href="/css/materialize.min.css">
+    
+      <link rel="stylesheet" href="/css/main.min.css">
+    
   
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
-  
-
+  <style type="text/css">
+      html{
+          font-family: sans-serif;
+          font-weight: 300;
+      }
+      @font-face {
+          font-family: 'Material Icons';
+          font-style: normal;
+          font-weight: 400;
+          src: url(/fonts/MaterialIcons-Regular.eot);
+          src: url(/fonts/MaterialIcons-Regular.woff2) format('woff2'),
+          url(/fonts/MaterialIcons-Regular.woff) format('woff'),
+          url(/fonts/MaterialIcons-Regular.ttf) format('truetype')
+      }
+  </style>
 </head>
-
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
+<div id="menu-box"><a href="javascript:void(0)" id="menu" data-activates="slide-out" class="button-collapse menu" ><span class="nav-btn"></span></a></div>
+<div id="menu-outer">
+  <div id="menu-inner">
+      <ul id="slide-out" class="side-nav" >
+    <div class="nav-header"  style="background-image: url(/images/header-bg.png);background-color:#26A69A">
+    <div class="header-box"><img src="/images/header.png" ondragstart="return false;"></div>
+    <p>John Doe</p>
+    <div class="nav-link">
+        
+        <a href="http://example.com" target="_blank"> <div class="link-box twitter"></div></a>
+        
+        
+        <a  href="http://example.com" target="_blank"><div class="link-box github"></div></a>
+        
+        
+        <a href="mailto:http://example.com"><div class="link-box email"></div></a>
+        
+        
+        <a href="http://example.com" target="_blank"><div class="link-box weibo"></div></a>
+        
+        
+        <a href="http://example.com" target="_blank"> <div class="link-box zhihu"></div></a>
+        
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
+    <div class="nav-search">
+        <form id="search-form"> <!-- 搜索框相关 -->
+            <input type="text" id="local-search-input" name="q" results="0" placeholder="搜索..." class="search form-control" autocomplete="off" autocorrect="off"/>
+            <div class="nav-search-img"><i class="material-icons">search</i></div>
+        </form>
+        <div id="local-search-result"></div> <!-- 搜索结果区 -->
+        <p class='no-result'>无搜索结果</p>
     </div>
+</div>
+    <!--Homepage-->
+
+<li class="nav-list">
+    <a href="/" target="_self">
+        <div class="nav-ico"><i class="material-icons">home</i> </div><p>主页</p>
+    </a>
+</li>
+
+<!--archives-->
+
+<li class="nav-list dropdown-btn">
+    <a  class=""  target="_self">
+        <div class="nav-ico"><i class="material-icons">assignment</i></div><p>归档</p><div class="dropdown-ico"><i class="material-icons">arrow_drop_down</i></div>
+    </a>
+</li>
+
+<ul class="dropdown-menu dropdown" >
+    <li class="nav-dropdown-list">
+        <a class="archive-link" href="/archives/2017/07/">July 2017<span class="archive-count">2</span></a></li><li class="nav-dropdown-list"><a class="archive-link" href="/archives/2017/06/">June 2017<span class="archive-count">3</span></a></li><li class="nav-dropdown-list"><a class="archive-link" href="/archives/2017/05/">May 2017<span class="archive-count">1</span></a></li><li class="nav-dropdown-list"><a class="archive-link" href="/archives/2017/04/">April 2017<span class="archive-count">4</span></a>
+    </li>
+</ul>
+<!--categories-->
+
+<ul class="dropdown-menu dropdown" >
+    <li class="nav-dropdown-list">
+        
+    </li>
+</ul>
+<!--tags-->
+
+<li class="nav-list">
+    <a href="/archives" target="_self">
+        <div class="nav-ico"><i class="material-icons">bookmark</i> </div><p>标签</p>
+    </a>
+</li>
+
+<!--photo-->
+
+<li class="nav-list">
+    <a href="/photo" class="nopjax" target="_self">
+        <div class="nav-ico"><i class="material-icons">insert_photo</i> </div><p>影集</p>
+    </a>
+</li>
+
+<!--friends-->
+
+<li class="nav-list">
+    <a href="/friends" target="_self">
+        <div class="nav-ico"><i class="material-icons">face</i> </div><p>友链</p>
+    </a>
+</li>
+
+<!--about-->
+
+<li class="nav-list">
+    <a href="/about" target="_self">
+        <div class="nav-ico"><i class="material-icons">copyright</i> </div><p>关于</p>
+    </a>
+</li>
+
+
+</ul>
+
   </div>
-</header>
-      <div class="outer">
-        <section id="main">
-  
-  
+</div>
+
+<div id="content-outer">
+  <div id="content-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
+
+
+<div class="tags">
+  
+</div>
+
+<div id="recent-posts">
+  
+      <div class="recent-post-item lazy" style="background-color:#26A69A"  data-original="/images/random/vateral-1.png"  >
+        <a class="recent-post-link" href="/2017/07/16/hello-world/">
+        <div class="post-hover">
+          <!--title-->
+          <p class="post-title"><a href="/2017/07/16/hello-world/" >Hello World</a></p>
+
+          <!--date-->
+          
+            <p class="post-time">John Doe &nbsp &nbsp 发布于:<time datetime="2017-07-16T14:40:58.214Z">
+              2017-07-16
+            </time>
+            </p>
+          
+
+          <!--tags-->
+
+          标签:
+            
+            暂无标签
+            
+          <!--分类-->
+
+          分类:
+            
+            暂无分类
+            
+
+          <!--excerpt-->
+          <div class="post-excerpt">
+            <p>
+              摘要：
+              
+                Welcome to Hexo! This is your very first post. Check 
+              
+            </p>
+          </div>
+          <div class="post-more"><a href="/2017/07/16/hello-world/" >全文阅读</a></div>
         </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/07/16/hello-world/" class="archive-article-date">
-  <time datetime="2017-07-16T14:40:58.214Z" itemprop="datePublished">Jul 16</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/16/hello-world/">Hello World</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2017/07/16/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
+        </a>
       </div>
-      <footer id="footer">
   
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2017 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
+      <div class="recent-post-item lazy" style="background-color:#26A69A"   data-original="http://imgsrc.baidu.com/imgad/pic/item/b21c8701a18b87d6e5b7d73b0d0828381f30fd19.jpg"  >
+        <a class="recent-post-link" href="/2017/07/01/日记6.29/">
+        <div class="post-hover">
+          <!--title-->
+          <p class="post-title"><a href="/2017/07/01/日记6.29/" >上传失败</a></p>
+
+          <!--date-->
+          
+            <p class="post-time">John Doe &nbsp &nbsp 发布于:<time datetime="2017-07-01T13:55:10.000Z">
+              2017-07-01
+            </time>
+            </p>
+          
+
+          <!--tags-->
+
+          标签:
+            
+            暂无标签
+            
+          <!--分类-->
+
+          分类:
+            
+            暂无分类
+            
+
+          <!--excerpt-->
+          <div class="post-excerpt">
+            <p>
+              摘要：
+              
+                再次测试
+
+              
+            </p>
+          </div>
+          <div class="post-more"><a href="/2017/07/01/日记6.29/" >全文阅读</a></div>
+        </div>
+        </a>
+      </div>
   
-    <a href="/" class="mobile-nav-link">Home</a>
+      <div class="recent-post-item lazy" style="background-color:#26A69A"   data-original="https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=949051278,1523955622&amp;fm=58&amp;s=8980C5128F506CC85CEDC9C60200D0B3"  >
+        <a class="recent-post-link" href="/2017/06/30/代码/">
+        <div class="post-hover">
+          <!--title-->
+          <p class="post-title"><a href="/2017/06/30/代码/" >柴有辉-基于arduino的智能花盆移动传感控制模块的研究与实现-代码</a></p>
+
+          <!--date-->
+          
+            <p class="post-time">John Doe &nbsp &nbsp 发布于:<time datetime="2017-06-30T06:00:00.000Z">
+              2017-06-30
+            </time>
+            </p>
+          
+
+          <!--tags-->
+
+          标签:
+            
+            暂无标签
+            
+          <!--分类-->
+
+          分类:
+            
+            暂无分类
+            
+
+          <!--excerpt-->
+          <div class="post-excerpt">
+            <p>
+              摘要：
+              
+                int theLightValue[4] = {20};   //4个光照值int theLightRange[2] = {200,500};  //光照的最佳范围
+void setup() {  Serial.begin(9600);
+  //红外蔽障传感器接口  pinMode(2,INPU...
+              
+            </p>
+          </div>
+          <div class="post-more"><a href="/2017/06/30/代码/" >全文阅读</a></div>
+        </div>
+        </a>
+      </div>
   
-    <a href="/archives" class="mobile-nav-link">Archives</a>
+      <div class="recent-post-item lazy" style="background-color:#26A69A"   data-original="https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=949051278,1523955622&amp;fm=58&amp;s=8980C5128F506CC85CEDC9C60200D0B3"  >
+        <a class="recent-post-link" href="/2017/06/25/毕设/">
+        <div class="post-hover">
+          <!--title-->
+          <p class="post-title"><a href="/2017/06/25/毕设/" >柴有辉-基于arduino的智能花盆移动传感控制模块的研究与实现-论文</a></p>
+
+          <!--date-->
+          
+            <p class="post-time">John Doe &nbsp &nbsp 发布于:<time datetime="2017-06-25T06:00:00.000Z">
+              2017-06-25
+            </time>
+            </p>
+          
+
+          <!--tags-->
+
+          标签:
+            
+            暂无标签
+            
+          <!--分类-->
+
+          分类:
+            
+            暂无分类
+            
+
+          <!--excerpt-->
+          <div class="post-excerpt">
+            <p>
+              摘要：
+              
+                郑州大学毕业设计（论文）
+题    目： 基于arduino的智能花盆移动传感控制模块的研究与实现指导教师：    王志华     职称：   副教授           
+学生姓名：    柴有辉      学号：   20137750104专    业：     计算机科学与技术（软件开发....
+              
+            </p>
+          </div>
+          <div class="post-more"><a href="/2017/06/25/毕设/" >全文阅读</a></div>
+        </div>
+        </a>
+      </div>
   
+      <div class="recent-post-item lazy" style="background-color:#26A69A"   data-original="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1498369066348&amp;di=00f63b2566b000f0ad8671bdc1b1d94d&amp;imgtype=0&amp;src=http%3A%2F%2Fimg4q.duitang.com%2Fuploads%2Fitem%2F201412%2F08%2F20141208125401_MWZdn.png"  >
+        <a class="recent-post-link" href="/2017/06/25/济世图/">
+        <div class="post-hover">
+          <!--title-->
+          <p class="post-title"><a href="/2017/06/25/济世图/" >第一记-济世图引</a></p>
+
+          <!--date-->
+          
+            <p class="post-time">John Doe &nbsp &nbsp 发布于:<time datetime="2017-06-25T02:47:00.000Z">
+              2017-06-25
+            </time>
+            </p>
+          
+
+          <!--tags-->
+
+          标签:
+            
+            暂无标签
+            
+          <!--分类-->
+
+          分类:
+            
+            暂无分类
+            
+
+          <!--excerpt-->
+          <div class="post-excerpt">
+            <p>
+              摘要：
+              
+                ​    家里有本宝藏秘图，我从中读到这些信息。
+​    在中国，有着西高东低三层阶梯之分，海拔4000米以上的叫做高原从昆仑山，祁连山脉，横断山脉。划界而分，海拔1000-2000的盆地和高原，依着大兴安岭，太行山脉，巫山，雪峰山切分而下。
+​    有8件传世秘宝藏在青藏高原，内蒙古高原，黄土高原，云贵高原四大高...
+              
+            </p>
+          </div>
+          <div class="post-more"><a href="/2017/06/25/济世图/" >全文阅读</a></div>
+        </div>
+        </a>
+      </div>
+  
+      <div class="recent-post-item lazy" style="background-color:#26A69A"  data-original="/images/random/vateral-1.png"  >
+        <a class="recent-post-link" href="/2017/05/01/继承封装多态/">
+        <div class="post-hover">
+          <!--title-->
+          <p class="post-title"><a href="/2017/05/01/继承封装多态/" >继承，封装，多态</a></p>
+
+          <!--date-->
+          
+            <p class="post-time">John Doe &nbsp &nbsp 发布于:<time datetime="2017-05-01T08:00:00.000Z">
+              2017-05-01
+            </time>
+            </p>
+          
+
+          <!--tags-->
+
+          标签:
+            
+            暂无标签
+            
+          <!--分类-->
+
+          分类:
+            
+            暂无分类
+            
+
+          <!--excerpt-->
+          <div class="post-excerpt">
+            <p>
+              摘要：
+              
+                一、封装：
+　　封装是实现面向对象程序设计的第一步，封装就是将数据或函数等集合在一个个的单元中（我们称之为类）。被封装的对象通常被称为抽象数据类型。 
+ 封装的意义：　　封装的意义在于保护或者防止代码（数据）被我们无意中破坏。在面向对象程序设计中数据被...
+              
+            </p>
+          </div>
+          <div class="post-more"><a href="/2017/05/01/继承封装多态/" >全文阅读</a></div>
+        </div>
+        </a>
+      </div>
+  
+      <div class="recent-post-item lazy" style="background-color:#26A69A"  data-original="/images/random/vateral-2.png"  >
+        <a class="recent-post-link" href="/2017/04/30/设计模式/">
+        <div class="post-hover">
+          <!--title-->
+          <p class="post-title"><a href="/2017/04/30/设计模式/" >设计模式</a></p>
+
+          <!--date-->
+          
+            <p class="post-time">John Doe &nbsp &nbsp 发布于:<time datetime="2017-04-30T06:00:00.000Z">
+              2017-04-30
+            </time>
+            </p>
+          
+
+          <!--tags-->
+
+          标签:
+            
+            暂无标签
+            
+          <!--分类-->
+
+          分类:
+            
+            暂无分类
+            
+
+          <!--excerpt-->
+          <div class="post-excerpt">
+            <p>
+              摘要：
+              
+                面向对象有几个原则：单一职责原则 （Single Responsiblity Princip...
+              
+            </p>
+          </div>
+          <div class="post-more"><a href="/2017/04/30/设计模式/" >全文阅读</a></div>
+        </div>
+        </a>
+      </div>
+  
+      <div class="recent-post-item lazy" style="background-color:#26A69A"   data-original="http://b.hiphotos.baidu.com/baike/w%3D268%3Bg%3D0/sign=7ef9c6417d1ed21b79c929e39555baf9/14ce36d3d539b600c39e5804e950352ac65cb735.jpg"  >
+        <a class="recent-post-link" href="/2017/04/26/楼下三十三层/">
+        <div class="post-hover">
+          <!--title-->
+          <p class="post-title"><a href="/2017/04/26/楼下三十三层/" >三十三重天阙</a></p>
+
+          <!--date-->
+          
+            <p class="post-time">John Doe &nbsp &nbsp 发布于:<time datetime="2017-04-26T06:03:10.000Z">
+              2017-04-26
+            </time>
+            </p>
+          
+
+          <!--tags-->
+
+          标签:
+            
+            暂无标签
+            
+          <!--分类-->
+
+          分类:
+            
+            暂无分类
+            
+
+          <!--excerpt-->
+          <div class="post-excerpt">
+            <p>
+              摘要：
+              
+                三十三层天，离恨天最高；四百四十病，相思病最苦
+
+              
+            </p>
+          </div>
+          <div class="post-more"><a href="/2017/04/26/楼下三十三层/" >全文阅读</a></div>
+        </div>
+        </a>
+      </div>
+  
+      <div class="recent-post-item lazy" style="background-color:#26A69A"   data-original="https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=2933773599,3484489584&amp;fm=58"  >
+        <a class="recent-post-link" href="/2017/04/26/笔试题/">
+        <div class="post-hover">
+          <!--title-->
+          <p class="post-title"><a href="/2017/04/26/笔试题/" >C#笔试题</a></p>
+
+          <!--date-->
+          
+            <p class="post-time">John Doe &nbsp &nbsp 发布于:<time datetime="2017-04-26T06:03:10.000Z">
+              2017-04-26
+            </time>
+            </p>
+          
+
+          <!--tags-->
+
+          标签:
+            
+            暂无标签
+            
+          <!--分类-->
+
+          分类:
+            
+            暂无分类
+            
+
+          <!--excerpt-->
+          <div class="post-excerpt">
+            <p>
+              摘要：
+              
+                
+.NET和C#有什么区别
+
+答：.NET一般指 .NET FrameWork框架，它是一种平台，一种技术。
+C#是一种编程语言，可以基于.NET平台的应用。
+2．一列数的规则如下: 1、1、2、3、5、8、13、21、34…… 求第30位数是多少，用递归
+              
+            </p>
+          </div>
+          <div class="post-more"><a href="/2017/04/26/笔试题/" >全文阅读</a></div>
+        </div>
+        </a>
+      </div>
+  
+      <div class="recent-post-item lazy" style="background-color:#26A69A"  data-original="/images/random/vateral-18.png"  >
+        <a class="recent-post-link" href="/2017/04/24/first/">
+        <div class="post-hover">
+          <!--title-->
+          <p class="post-title"><a href="/2017/04/24/first/" >Gitblog 详细介绍</a></p>
+
+          <!--date-->
+          
+            <p class="post-time">John Doe &nbsp &nbsp 发布于:<time datetime="2017-04-24T10:06:20.000Z">
+              2017-04-24
+            </time>
+            </p>
+          
+
+          <!--tags-->
+
+          标签:
+            
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Gitblog-详细介绍/">Gitblog 详细介绍</a></li></ul>
+            
+          <!--分类-->
+
+          分类:
+            
+            暂无分类
+            
+
+          <!--excerpt-->
+          <div class="post-excerpt">
+            <p>
+              摘要：
+              
+                一. 简介Gitblog是一个简单易用的Markdown博客系统，它不需要数据库，没有管理后台功能，更新博客只需要添加你写好的Markdown文件即可。它摆脱了在线编辑器排版困难，无法实时预览的缺点，一切...
+              
+            </p>
+          </div>
+          <div class="post-more"><a href="/2017/04/24/first/" >全文阅读</a></div>
+        </div>
+        </a>
+      </div>
+  
+  <nav class="paging">
+    <span class="page-number current">1</span>
 </nav>
-    
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+</div>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
 
 
-<script src="/js/script.js"></script>
 
   </div>
+</div>
+<div id="bottom-outer">
+  <div id="bottom-inner">
+    <a  id="top-button" onfocus="this.blur();"><div class="up upinbody" style="background-color:#26A69A"><i class="material-icons material-up">vertical_align_top</i></div></a>
+
+
+<p >Copyright ©  2017  Hexo</p>
+<p >Powered by <a href="https://hexo.io/" target="_blank"> Hexo </a> & Theme - <a href="https://github.com/moumao/hexo-theme-Vateral" target="_blank">Vateral</a></p>
+<p style="font-size: 10px" id="footer-times" data-time="9/9/2013 00:00:00"></p>
+<script>
+    var beginTime=document.getElementById("footer-times").dataset.time
+    function show_date_time(){
+        var span=document.getElementById("footer-times")
+        window.setTimeout("show_date_time()", 1000);
+        BirthDay=new Date(beginTime);//初始日期
+        today=new Date();
+        timeold=(today.getTime()-BirthDay.getTime());
+        sectimeold=timeold/1000
+        secondsold=Math.floor(sectimeold);
+        msPerDay=24*60*60*1000
+        e_daysold=timeold/msPerDay
+        daysold=Math.floor(e_daysold);
+        e_hrsold=(e_daysold-daysold)*24;
+        hrsold=Math.floor(e_hrsold);
+        e_minsold=(e_hrsold-hrsold)*60;
+        minsold=Math.floor((e_hrsold-hrsold)*60);
+        seconds=Math.floor((e_minsold-minsold)*60);
+        span.innerHTML="本站已运行"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
+    }
+    show_date_time();
+</script>
+
+  </div>
+</div>
+
+<!--影集界面需要的资源-->
+
+
+
+<!-- scripts list from theme config.yml -->
+
+<script src="/js/jquery-3.1.1.min.js"></script>
+
+<script src="/js/materialize.min.js"></script>
+
+<script src="/js/main.min.js"></script>
+
+
+<script>
+    NProgress.start();
+    NProgress.done();
+    lazy();
+    links();
+    window.onpopstate = menu();
+    //pjax操作
+    $(document).pjax('a:not(.nopjax)', '#content-inner', {fragment:'#content-inner', timeout:8000});
+    $(document).on('pjax:start', NProgress.start).on('pjax:end', NProgress.done)
+        .on('pjax:end', () => {
+            dowmdiv();
+            lazy();
+            toc();
+            links();
+            menu();
+        });
+</script>
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
 </body>
 </html>

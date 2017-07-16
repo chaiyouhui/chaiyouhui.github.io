@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="null">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  
+  <meta name="keywords" content="网站关键字">
+  <meta name="description" content="网站简介">
+  
+  <title>Hexo</title>
+  
+    <!-- stylesheets list from config.yml -->
+    
+      <link rel="stylesheet" href="/css/materialize.min.css">
+    
+      <link rel="stylesheet" href="/css/main.min.css">
+    
+  
+  <style type="text/css">
+      html{
+          font-family: sans-serif;
+          font-weight: 300;
+      }
+      @font-face {
+          font-family: 'Material Icons';
+          font-style: normal;
+          font-weight: 400;
+          src: url(/fonts/MaterialIcons-Regular.eot);
+          src: url(/fonts/MaterialIcons-Regular.woff2) format('woff2'),
+          url(/fonts/MaterialIcons-Regular.woff) format('woff'),
+          url(/fonts/MaterialIcons-Regular.ttf) format('truetype')
+      }
+  </style>
+</head>
+<body>
+<div id="menu-box"><a href="javascript:void(0)" id="menu" data-activates="slide-out" class="button-collapse menu" ><span class="nav-btn"></span></a></div>
+<div id="menu-outer">
+  <div id="menu-inner">
+      <ul id="slide-out" class="side-nav" >
+    <div class="nav-header"  style="background-image: url(/images/header-bg.png);background-color:#26A69A">
+    <div class="header-box"><img src="/images/header.png" ondragstart="return false;"></div>
+    <p>John Doe</p>
+    <div class="nav-link">
+        
+        <a href="http://example.com" target="_blank"> <div class="link-box twitter"></div></a>
+        
+        
+        <a  href="http://example.com" target="_blank"><div class="link-box github"></div></a>
+        
+        
+        <a href="mailto:http://example.com"><div class="link-box email"></div></a>
+        
+        
+        <a href="http://example.com" target="_blank"><div class="link-box weibo"></div></a>
+        
+        
+        <a href="http://example.com" target="_blank"> <div class="link-box zhihu"></div></a>
+        
+    </div>
+    <div class="nav-search">
+        <form id="search-form"> <!-- 搜索框相关 -->
+            <input type="text" id="local-search-input" name="q" results="0" placeholder="搜索..." class="search form-control" autocomplete="off" autocorrect="off"/>
+            <div class="nav-search-img"><i class="material-icons">search</i></div>
+        </form>
+        <div id="local-search-result"></div> <!-- 搜索结果区 -->
+        <p class='no-result'>无搜索结果</p>
+    </div>
+</div>
+    <!--Homepage-->
+
+<li class="nav-list">
+    <a href="/" target="_self">
+        <div class="nav-ico"><i class="material-icons">home</i> </div><p>主页</p>
+    </a>
+</li>
+
+<!--archives-->
+
+<li class="nav-list dropdown-btn">
+    <a  class=""  target="_self">
+        <div class="nav-ico"><i class="material-icons">assignment</i></div><p>归档</p><div class="dropdown-ico"><i class="material-icons">arrow_drop_down</i></div>
+    </a>
+</li>
+
+<ul class="dropdown-menu dropdown" >
+    <li class="nav-dropdown-list">
+        <a class="archive-link" href="/archives/2017/07/">July 2017<span class="archive-count">2</span></a></li><li class="nav-dropdown-list"><a class="archive-link" href="/archives/2017/06/">June 2017<span class="archive-count">3</span></a></li><li class="nav-dropdown-list"><a class="archive-link" href="/archives/2017/05/">May 2017<span class="archive-count">1</span></a></li><li class="nav-dropdown-list"><a class="archive-link" href="/archives/2017/04/">April 2017<span class="archive-count">4</span></a>
+    </li>
+</ul>
+<!--categories-->
+
+<ul class="dropdown-menu dropdown" >
+    <li class="nav-dropdown-list">
+        
+    </li>
+</ul>
+<!--tags-->
+
+<li class="nav-list">
+    <a href="/archives" target="_self">
+        <div class="nav-ico"><i class="material-icons">bookmark</i> </div><p>标签</p>
+    </a>
+</li>
+
+<!--photo-->
+
+<li class="nav-list">
+    <a href="/photo" class="nopjax" target="_self">
+        <div class="nav-ico"><i class="material-icons">insert_photo</i> </div><p>影集</p>
+    </a>
+</li>
+
+<!--friends-->
+
+<li class="nav-list">
+    <a href="/friends" target="_self">
+        <div class="nav-ico"><i class="material-icons">face</i> </div><p>友链</p>
+    </a>
+</li>
+
+<!--about-->
+
+<li class="nav-list">
+    <a href="/about" target="_self">
+        <div class="nav-ico"><i class="material-icons">copyright</i> </div><p>关于</p>
+    </a>
+</li>
+
+
+</ul>
+
+  </div>
+</div>
+
+<div id="content-outer">
+  <div id="content-inner">
+    
+<article id="post">
+  <div class="post-page-title"  style="background-color:#26A69A;background-image:url(/images/random/vateral-16.png)" >
+  <h2>设计模式</h2>
+    
+  <p>作者:John Doe &nbsp&nbsp 发布于:<time datetime="2017-04-30T06:00:00.000Z">
+          2017-04-30
+    </time>
+  </p>
+    
+  </div>
+  <div class="post-page-content">
+  <p>面向对象有几个原则：<a href="http://baike.baidu.com/item/%E5%8D%95%E4%B8%80%E8%81%8C%E8%B4%A3%E5%8E%9F%E5%88%99" target="_blank" rel="external">单一职责原则</a> （Single Responsiblity Principle SRP）<a href="http://baike.baidu.com/item/%E5%BC%80%E9%97%AD%E5%8E%9F%E5%88%99" target="_blank" rel="external">开闭原则</a>（Open Closed Principle，OCP）、<a href="http://baike.baidu.com/item/%E9%87%8C%E6%B0%8F%E4%BB%A3%E6%8D%A2%E5%8E%9F%E5%88%99" target="_blank" rel="external">里氏代换原则</a>（Liskov Substitution Principle，LSP）、<a href="http://baike.baidu.com/item/%E4%BE%9D%E8%B5%96%E5%80%92%E8%BD%AC%E5%8E%9F%E5%88%99" target="_blank" rel="external">依赖倒转原则</a>（Dependency Inversion Principle，DIP）、<a href="http://baike.baidu.com/item/%E6%8E%A5%E5%8F%A3%E9%9A%94%E7%A6%BB%E5%8E%9F%E5%88%99" target="_blank" rel="external">接口隔离原则</a>（Interface Segregation Principle，ISP）、合成/聚合复用原则（Composite/Aggregate Reuse Principle，CARP）、最小知识原则（Principle of Least Knowledge，PLK，也叫<a href="http://baike.baidu.com/item/%E8%BF%AA%E7%B1%B3%E7%89%B9%E6%B3%95%E5%88%99" target="_blank" rel="external">迪米特法则</a>）。开闭原则具有理想主义的色彩，它是面向对象设计的终极目标。其他几条，则可以看做是开闭原则的实现方法。</p>
+<p>设计模式分为三种类型，共23种。</p>
+<ul>
+<li><strong>创建型模式</strong>：单例模式、<a href="http://baike.baidu.com/item/%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F" target="_blank" rel="external">抽象工厂模式</a>、建造者模式、工厂模式、原型模式。</li>
+<li><strong>结构型模式</strong>：适配器模式、桥接模式、装饰模式、组合模式、外观模式、<a href="http://baike.baidu.com/item/%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F" target="_blank" rel="external">享元模式</a>、代理模式。</li>
+<li><strong>行为型模式</strong>：模版方法模式、命令模式、<a href="http://baike.baidu.com/item/%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F" target="_blank" rel="external">迭代器模式</a>、<a href="http://baike.baidu.com/item/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F" target="_blank" rel="external">观察者模式</a>、中介者模式、备忘录模式、解释器模式（<a href="http://baike.baidu.com/item/Interpreter%E6%A8%A1%E5%BC%8F" target="_blank" rel="external">Interpreter模式</a>）、状态模式、策略模式、职责链模式(责任链模式)、访问者模式。</li>
+</ul>
+<p>按字典序排列简介如下。</p>
+<p>Abstract Factory（<a href="http://baike.baidu.com/item/%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F" target="_blank" rel="external">抽象工厂模式</a>）：提供一个创建一系列相关或相互依赖对象的接口，而无需指定它们具体的类。</p>
+<p>Adapter（<a href="http://baike.baidu.com/item/%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F" target="_blank" rel="external">适配器模式</a>）：将一个类的接口转换成客户希望的另外一个接口。Adapter模式使得原本由于接口不兼容而不能一起工作的那些类可以一起工作。</p>
+<p>Bridge（<a href="http://baike.baidu.com/item/%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F" target="_blank" rel="external">桥接模式</a>）：将抽象部分与它的实现部分分离，使它们都可以独立地变化。</p>
+<p>Builder（<a href="http://baike.baidu.com/item/%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F" target="_blank" rel="external">建造者模式</a>）：将一个复杂对象的构建与它的表示分离，使得同样的构建过程可以创建不同的表示。</p>
+<p>Chain of Responsibility（<a href="http://baike.baidu.com/item/%E8%B4%A3%E4%BB%BB%E9%93%BE%E6%A8%A1%E5%BC%8F" target="_blank" rel="external">责任链模式</a>）：为解除请求的发送者和接收者之间耦合，而使多个对象都有机会处理这个请求。将这些对象连成一条链，并沿着这条链传递该请求，直到有一个对象处理它。</p>
+<p>Command（<a href="http://baike.baidu.com/item/%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F" target="_blank" rel="external">命令模式</a>）：将一个请求封装为一个对象，从而使你可用不同的请求对客户进行参数化；对请求排队或记录请求日志，以及支持可取消的操作。</p>
+<p>Composite（<a href="http://baike.baidu.com/item/%E7%BB%84%E5%90%88%E6%A8%A1%E5%BC%8F" target="_blank" rel="external">组合模式</a>）：将对象组合成树形结构以表示“部分-整体”的层次结构。它使得客户对单个对象和复合对象的使用具有一致性。</p>
+<p>Decorator（<a href="http://baike.baidu.com/item/%E8%A3%85%E9%A5%B0%E6%A8%A1%E5%BC%8F" target="_blank" rel="external">装饰模式</a>）：动态地给一个对象添加一些额外的职责。就扩展功能而言， 它比生成子类方式更为灵活。</p>
+<p>Facade（<a href="http://baike.baidu.com/item/%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F" target="_blank" rel="external">外观模式</a>）：为子系统中的一组接口提供一个一致的界面，Facade模式定义了一个高层接口，这个接口使得这一子系统更加容易使用。</p>
+<p>Factory Method（<a href="http://baike.baidu.com/item/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F" target="_blank" rel="external">工厂模式</a>）：定义一个用于创建对象的接口，让子类决定将哪一个类实例化。Factory Method使一个类的实例化延迟到其子类。</p>
+<p>Flyweight（<a href="http://baike.baidu.com/item/%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F" target="_blank" rel="external">享元模式</a>）：运用共享技术有效地支持大量细粒度的对象。</p>
+<p>Interpreter（解析器模式）：给定一个语言, 定义它的文法的一种表示，并定义一个解释器, 该解释器使用该表示来解释语言中的句子。</p>
+<p>Iterator（<a href="http://baike.baidu.com/item/%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F" target="_blank" rel="external">迭代器模式</a>）：提供一种方法顺序访问一个聚合对象中各个元素，而又不需暴露该对象的内部表示。</p>
+<p>Mediator（<a href="http://baike.baidu.com/item/%E4%B8%AD%E4%BB%8B%E6%A8%A1%E5%BC%8F" target="_blank" rel="external">中介模式</a>）：用一个中介对象来封装一系列的对象交互。中介者使各对象不需要显式地相互引用，从而使其耦合松散，而且可以独立地改变它们之间的交互。</p>
+<p>Memento（<a href="http://baike.baidu.com/item/%E5%A4%87%E5%BF%98%E5%BD%95%E6%A8%A1%E5%BC%8F" target="_blank" rel="external">备忘录模式</a>）：在不破坏封装性的前提下，捕获一个对象的内部状态，并在该对象之外保存这个状态。这样以后就可将该对象恢复到保存的状态。</p>
+<p>Observer（<a href="http://baike.baidu.com/item/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F" target="_blank" rel="external">观察者模式</a>）：定义对象间的一种一对多的依赖关系,以便当一个对象的状态发生改变时,所有依赖于它的对象都得到通知并自动刷新。</p>
+<p>Prototype（<a href="http://baike.baidu.com/item/%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F" target="_blank" rel="external">原型模式</a>）：用原型实例指定创建对象的种类，并且通过拷贝这个原型来创建新的对象。</p>
+<p>Proxy（<a href="http://baike.baidu.com/item/%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F" target="_blank" rel="external">代理模式</a>）：为其他对象提供一个代理以控制对这个对象的访问。</p>
+<p>Singleton（<a href="http://baike.baidu.com/item/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F" target="_blank" rel="external">单例模式</a>）：保证一个类仅有一个实例，并提供一个访问它的全局访问点。 单例模式是最简单的设计模式之一，但是对于Java的开发者来说，它却有很多缺陷。在九月的专栏中，David Geary探讨了单例模式以及在面对多线程（multi-threading）、类装载器（class loaders）和序列化（serialization）时如何处理这些缺陷。</p>
+<p>State（<a href="http://baike.baidu.com/item/%E7%8A%B6%E6%80%81%E6%A8%A1%E5%BC%8F" target="_blank" rel="external">状态模式</a>）：允许一个对象在其内部状态改变时改变它的行为。对象看起来似乎修改了它所属的类。</p>
+<p>Strategy（<a href="http://baike.baidu.com/item/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F" target="_blank" rel="external">策略模式</a>）：定义一系列的算法,把它们一个个封装起来, 并且使它们可相互替换。本模式使得算法的变化可独立于使用它的客户。</p>
+<p><a href="http://baike.baidu.com/item/Template%20Method" target="_blank" rel="external">Template Method</a>（模板方法模式）：定义一个操作中的算法的骨架，而将一些步骤延迟到子类中。Template Method使得子类可以不改变一个算法的结构即可重定义该算法的某些特定步骤。</p>
+<p>Visitor（<a href="http://baike.baidu.com/item/%E8%AE%BF%E9%97%AE%E8%80%85%E6%A8%A1%E5%BC%8F" target="_blank" rel="external">访问者模式</a>）：表示一个作用于某对象结构中的各元素的操作。它使你可以在不改变各元素的类的前提下定义作用于这些元素的新操作。</p>
+<h3 id="工厂模式"><a href="#工厂模式" class="headerlink" title="工厂模式"></a>工厂模式</h3><p><a href="http://baike.baidu.com/pic/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/1212549/0/8644ebf81a4c510fe341c6a26259252dd52aa584?fr=lemma&amp;ct=single" target="_blank" rel="external"><img src="http://c.hiphotos.baidu.com/baike/s%3D250/sign=d39ca911ab014c081d3b2fa03a7a025b/8644ebf81a4c510fe341c6a26259252dd52aa584.jpg" alt="工厂模式（Factory）"></a>工厂模式（Factory）</p>
+<p>意图</p>
+<p>定义一个用于创建对象的接口，让子类决定实例化哪一个类。Factory Method 使一个类的实例化延迟到其子类。</p>
+<p><strong>适用性</strong></p>
+<ul>
+<li>当一个类不知道它所必须创建的对象的类的时候。</li>
+<li>当一个类希望由它的子类来指定它所创建的对象的时候。</li>
+<li>当类将创建对象的职责委托给多个帮助子类中的某一个，并且你希望将哪一个帮助子类是代理者这一信息局部化的时候。</li>
+</ul>
+<h3 id="抽象工厂模式"><a href="#抽象工厂模式" class="headerlink" title="抽象工厂模式"></a>抽象工厂模式</h3><p><a href="http://baike.baidu.com/pic/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/1212549/0/0b55b319ebc4b745aaa590aecdfc1e178a821550?fr=lemma&amp;ct=single" target="_blank" rel="external"><img src="http://b.hiphotos.baidu.com/baike/s%3D250/sign=2af1ee8b9045d688a702b5a194c37dab/0b55b319ebc4b745aaa590aecdfc1e178a821550.jpg" alt="抽象工厂模式（Abstract Factory）"></a>抽象工厂模式（Abstract Factory）</p>
+<p>意图</p>
+<p>提供一个创建一系列相关或相互依赖对象的接口，而无需指定它们具体的类。</p>
+<p><strong>适用性</strong></p>
+<ul>
+<li>一个系统要独立于它的产品的创建、组合和表示时。</li>
+<li>一个系统要由多个产品系列中的一个来配置时。</li>
+<li>当你要强调一系列相关的产品对象的设计以便进行联合使用时。</li>
+<li>当你提供一个产品类库，而只想显示它们的接口而不是实现时。</li>
+</ul>
+<h3 id="建造者模式"><a href="#建造者模式" class="headerlink" title="建造者模式"></a>建造者模式</h3><p><strong>意图</strong></p>
+<p><a href="http://baike.baidu.com/pic/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/1212549/0/9f2f070828381f30eaa0ad11ab014c086f06f0c8?fr=lemma&amp;ct=single" target="_blank" rel="external"><img src="http://d.hiphotos.baidu.com/baike/s%3D250/sign=4123ccbbca95d143de76e32643f18296/9f2f070828381f30eaa0ad11ab014c086f06f0c8.jpg" alt="建造者模式"></a>建造者模式</p>
+<p><strong>适用性</strong></p>
+<ul>
+<li>当创建复杂对象的算法应该独立于该对象的组成部分以及它们的装配方式时。</li>
+<li>当构造过程必须允许被构造的对象有不同的表示时。</li>
+</ul>
+<h3 id="原型模式"><a href="#原型模式" class="headerlink" title="原型模式"></a>原型模式</h3><p><strong>意图</strong></p>
+<p><a href="http://baike.baidu.com/pic/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/1212549/0/d8f9d72a6059252deef03dbc369b033b5ab5b9a6?fr=lemma&amp;ct=single" target="_blank" rel="external"><img src="http://c.hiphotos.baidu.com/baike/s%3D250/sign=54dc081d087b020808c938e452d8f25f/d8f9d72a6059252deef03dbc369b033b5ab5b9a6.jpg" alt="原型模式"></a>原型模式</p>
+<p><strong>适用性</strong></p>
+<ul>
+<li>当要实例化的类是在运行时刻指定时，例如，通过动态装载；或者</li>
+<li>为了避免创建一个与产品类层次平行的工厂类层次时；或者</li>
+<li>当一个类的实例只能有几个不同状态组合中的一种时。建立相应数目的原型并克隆它们可能比每次用合适的状态手工实例化该类更方便一些。</li>
+</ul>
+<h3 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h3><p><strong>意图</strong></p>
+<p><a href="http://baike.baidu.com/pic/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/1212549/0/f703738da977391242e8a5d9fa198618377ae2b8?fr=lemma&amp;ct=single" target="_blank" rel="external"><img src="http://b.hiphotos.baidu.com/baike/s%3D250/sign=5c9dc84c53da81cb4ae684c86267d0a4/f703738da977391242e8a5d9fa198618377ae2b8.jpg" alt="单例模式"></a>单例模式</p>
+<p><strong>适用性</strong></p>
+<ul>
+<li>当类只能有一个实例而且客户可以从一个众所周知的访问点访问它时。</li>
+<li>当这个唯一实例应该是通过子类化可扩展的，并且客户应该无需更改代码就能使用一个扩展的实例时。</li>
+</ul>
+<h3 id="适配器模式"><a href="#适配器模式" class="headerlink" title="适配器模式"></a>适配器模式</h3><p><strong>意图</strong></p>
+<p><a href="http://baike.baidu.com/pic/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/1212549/0/a5c27d1ed21b0ef4a620b8e6dfc451da80cb3eb9?fr=lemma&amp;ct=single" target="_blank" rel="external"><img src="http://f.hiphotos.baidu.com/baike/s%3D250/sign=60a143c69058d109c0e3aeb7e159ccd0/a5c27d1ed21b0ef4a620b8e6dfc451da80cb3eb9.jpg" alt="适配器模式"></a>适配器模式</p>
+<p><strong>适用性</strong></p>
+<ul>
+<li>你想使用一个已经存在的类，而它的接口不符合你的需求。</li>
+<li>你想创建一个可以复用的类，该类可以与其他不相关的类或不可预见的类（即那些接口可能不一定兼容的类）协同工作。</li>
+<li>（仅适用于对象Adapter）你想使用一些已经存在的子类，但是不可能对每一个都进行子类化以匹配它们的接口。对象适配器可以适配它的父类接口。</li>
+</ul>
+<h3 id="桥接模式"><a href="#桥接模式" class="headerlink" title="桥接模式"></a>桥接模式</h3><p><strong>意图</strong></p>
+<p><a href="http://baike.baidu.com/pic/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/1212549/0/e824b899a9014c0869d8081d087b02087af4f4a2?fr=lemma&amp;ct=single" target="_blank" rel="external"><img src="http://h.hiphotos.baidu.com/baike/s%3D250/sign=aa95c49b71f082022992963a7bfafb8a/e824b899a9014c0869d8081d087b02087af4f4a2.jpg" alt="桥接模式"></a>桥接模式</p>
+<p><strong>适用性</strong></p>
+<ul>
+<li>你不希望在抽象和它的实现部分之间有一个固定的绑定关系。例如这种情况可能是因为，在程序运行时刻实现部分应可以被选择或者切换。</li>
+<li>类的抽象以及它的实现都应该可以通过生成子类的方法加以扩充。这时B r i d g e 模式使你可以对不同的抽象接口和实现部分进行组合，并分别对它们进行扩充。</li>
+<li>对一个抽象的实现部分的修改应对客户不产生影响，即客户的代码不必重新编译。</li>
+<li>（<a href="http://baike.baidu.com/item/C%2B%2B" target="_blank" rel="external">C++</a>）你想对客户完全隐藏抽象的实现部分。在C++中，类的表示在类接口中是可见的。</li>
+<li>有许多类要生成。这样一种类层次结构说明你必须将一个对象分解成两个部分。Rumbaugh称这种类层次结构为“嵌套的普化”（nested generalizations ）。</li>
+<li>你想在多个对象间共享实现（可能使用引用计数），但同时要求客户并不知道这一点。一个简单的例子便是Coplien的String类，在这个类中多个对象可以共享同一个字符串表示（StringRep）。</li>
+</ul>
+<h3 id="组合模式"><a href="#组合模式" class="headerlink" title="组合模式"></a>组合模式</h3><p><strong>意图</strong></p>
+<p><a href="http://baike.baidu.com/pic/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/1212549/0/6f061d950a7b020870101f5960d9f2d3562cc8a8?fr=lemma&amp;ct=single" target="_blank" rel="external"><img src="http://d.hiphotos.baidu.com/baike/s%3D250/sign=514bb18749fbfbedd859317a48f1f78e/6f061d950a7b020870101f5960d9f2d3562cc8a8.jpg" alt="组合模式"></a>组合模式</p>
+<p><strong>适用性</strong></p>
+<ul>
+<li>你想表示对象的部分—整体层次结构。</li>
+<li>你希望用户忽略组合对象与单个对象的不同，用户将统一地使用组合结构中的所有对象。</li>
+</ul>
+<h3 id="装饰模式"><a href="#装饰模式" class="headerlink" title="装饰模式"></a>装饰模式</h3><p><strong>意图</strong></p>
+<p><a href="http://baike.baidu.com/pic/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/1212549/0/d6ca7bcb0a46f21f921b7debf4246b600c33ae5e?fr=lemma&amp;ct=single" target="_blank" rel="external"><img src="http://e.hiphotos.baidu.com/baike/s%3D250/sign=9f0e9189a38b87d65442ac1a37092860/d6ca7bcb0a46f21f921b7debf4246b600c33ae5e.jpg" alt="装饰模式"></a>装饰模式</p>
+<p><strong>适用性</strong></p>
+<ul>
+<li>在不影响其他对象的情况下，以动态、透明的方式给单个对象添加职责。</li>
+<li>处理那些可以撤消的职责。</li>
+<li>当不能采用生成子类的方法进行扩充时。一种情况是，可能有大量独立的扩展，为支持每一种组合将产生大量的子类，使得子类数目呈爆炸性增长。另一种情况可能是因为类定义被隐藏，或类定义不能用于生成子类。</li>
+</ul>
+<h3 id="门面模式"><a href="#门面模式" class="headerlink" title="门面模式"></a>门面模式</h3><p><strong>意图</strong></p>
+<p><a href="http://baike.baidu.com/pic/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/1212549/0/902397dda144ad340f64a73fd2a20cf430ad85aa?fr=lemma&amp;ct=single" target="_blank" rel="external"><img src="http://g.hiphotos.baidu.com/baike/s%3D250/sign=10c51c7f9252982201333ec6e7cb7b3b/902397dda144ad340f64a73fd2a20cf430ad85aa.jpg" alt="门面模式"></a>门面模式</p>
+<p><strong>适用性</strong></p>
+<ul>
+<li>当你要为一个复杂子系统提供一个简单接口时。子系统往往因为不断演化而变得越来越复杂。大多数模式使用时都会产生更多更小的类。这使得子系统更具可重用性，也更容易对子系统进行定制，但这也给那些不需要定制子系统的用户带来一些使用上的困难。Facade可以提供一个简单的缺省视图，这一视图对大多数用户来说已经足够，而那些需要更多的可定制性的用户可以越过Facade层。</li>
+<li>客户程序与抽象类的实现部分之间存在着很大的依赖性。引入Facade将这个子系统与客户以及其他的子系统分离，可以提高子系统的独立性和可移植性。</li>
+<li>当你需要构建一个层次结构的子系统时，使用门面模式定义子系统中每层的入口点。如果子系统之间是相互依赖的，你可以让它们仅通过Facade进行通讯，从而简化了它们之间的依赖关系。</li>
+</ul>
+<h3 id="享元模式"><a href="#享元模式" class="headerlink" title="享元模式"></a>享元模式</h3><p><strong>意图</strong></p>
+<p><a href="http://baike.baidu.com/pic/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/1212549/0/2fdda3cc7cd98d10620e2c89233fb80e7aec90ab?fr=lemma&amp;ct=single" target="_blank" rel="external"><img src="http://d.hiphotos.baidu.com/baike/s%3D220/sign=088719bb8544ebf86971633de9f8d736/2fdda3cc7cd98d10620e2c89233fb80e7aec90ab.jpg" alt="享元模式"></a>享元模式</p>
+<p><strong>适用性</strong></p>
+<ul>
+<li>一个应用程序使用了大量的对象。</li>
+<li>完全由于使用大量的对象，造成很大的存储开销。</li>
+<li>对象的大多数状态都可变为外部状态。</li>
+<li>如果删除对象的外部状态，那么可以用相对较少的共享对象取代很多组对象。</li>
+<li>应用程序不依赖于对象标识。由于Flyweight对象可以被共享，对于概念上明显有别的对象，标识测试将返回真值。</li>
+</ul>
+<h3 id="代理模式"><a href="#代理模式" class="headerlink" title="代理模式"></a>代理模式</h3><p><strong>意图</strong></p>
+<p><a href="http://baike.baidu.com/pic/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/1212549/0/7c1ed21b0ef41bd5106ecb4c53da81cb39db3d4c?fr=lemma&amp;ct=single" target="_blank" rel="external"><img src="http://f.hiphotos.baidu.com/baike/s%3D250/sign=eb4e84d0d309b3deefbfe36dfcbf6cd3/7c1ed21b0ef41bd5106ecb4c53da81cb39db3d4c.jpg" alt="代理模式"></a>代理模式</p>
+<p><strong>适用性</strong></p>
+<p>在需要用比较通用和复杂的对象指针代替简单的指针的时候，使用Proxy模式。下面是一 些可以使用Proxy模式常见情况：</p>
+<ol>
+<li><p>远程代理（Remote Proxy）为一个对象在不同的地址空间提供局部代表。</p>
+</li>
+<li><p>虚代理（Virtual Proxy）根据需要创建开销很大的对象。</p>
+</li>
+<li><p>保护代理（Protection Proxy）控制对原始对象的访问。保护代理用于对象应该有不同 的访问权限的时候。</p>
+</li>
+<li><p>智能指引（Smart Reference）取代了简单的指针，它在访问对象时执行一些附加操作。 它的典型用途包括：</p>
+</li>
+<li><ul>
+<li>对指向实际对象的引用计数，这样当该对象没有引用时，可以自动释放它（也称为SmartPointers）。</li>
+<li>当第一次引用一个持久对象时，将它装入内存。</li>
+<li>在访问一个实际对象前，检查是否已经锁定了它，以确保其他对象不能改变它。</li>
+</ul>
+</li>
+</ol>
+<h3 id="职责链模式"><a href="#职责链模式" class="headerlink" title="职责链模式"></a>职责链模式</h3><p><strong>意图</strong></p>
+<p><a href="http://baike.baidu.com/pic/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/1212549/0/35a85edf8db1cb13ce411fabdf54564e92584b59?fr=lemma&amp;ct=single" target="_blank" rel="external"><img src="http://h.hiphotos.baidu.com/baike/s%3D220/sign=2a214f0ab0b7d0a27fc9039ffbee760d/35a85edf8db1cb13ce411fabdf54564e92584b59.jpg" alt="职责链模式"></a>职责链模式</p>
+<p>耦合关系</p>
+<p><strong>适用性</strong></p>
+<ul>
+<li>有多个的对象可以处理一个请求，哪个对象处理该请求运行时刻自动确定。</li>
+<li>你想在不明确指定接收者的情况下，向多个对象中的一个提交一个请求。</li>
+<li>可处理一个请求的对象集合应被动态指定。</li>
+</ul>
+<h3 id="命令模式"><a href="#命令模式" class="headerlink" title="命令模式"></a>命令模式</h3><p><strong>意图</strong></p>
+<p><a href="http://baike.baidu.com/pic/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/1212549/0/77c6a7efce1b9d168becb9d9f1deb48f8c54645a?fr=lemma&amp;ct=single" target="_blank" rel="external"><img src="http://g.hiphotos.baidu.com/baike/s%3D250/sign=4ce52c0feb50352ab561220d6342fb1a/77c6a7efce1b9d168becb9d9f1deb48f8c54645a.jpg" alt="命令模式"></a>命令模式</p>
+<p><strong>适用性</strong></p>
+<ul>
+<li>像上面讨论的MenuItem对象那样，抽象出待执行的动作以参数化某对象。你可用过程语言中的回调（callback）函数表达这种参数化机制。所谓回调函数是指函数先在某处注册，而它将在稍后某个需要的时候被调用。Command模式是回调机制的一个面向对象的替代品。</li>
+<li>在不同的时刻指定、排列和执行请求。一个Command对象可以有一个与初始请求无关的生存期。如果一个请求的接收者可用一种与地址空间无关的方式表达，那么就可将负责该请求的命令对象传送给另一个不同的进程并在那儿实现该请求。</li>
+<li>支持取消操作。Command的Execute操作可在实施操作前将状态存储起来，在取消操作时这个状态用来消除该操作的影响。Command接口必须添加一个Execute操作，该操作取消上一次Execute调用的效果。执行的命令被存储在一个历史列表中。可通过向后和向前遍历这一列表并分别调用Unexecute和Execute来实现重数不限的“取消”和“重做”。</li>
+<li>支持修改日志，这样当系统崩溃时，这些修改可以被重做一遍。在Command接口中添加装载操作和存储操作，可以用来保持变动的一个一致的修改日志。从崩溃中恢复的过程包括从磁盘中重新读入记录下来的命令并用Execute操作重新执行它们。</li>
+<li>用构建在原语操作上的高层操作构造一个系统。这样一种结构在支持事务（Transaction）的信息系统中很常见。一个事务封装了对数据的一组变动。Command模式提供了对事务进行建模的方法。Command有一个公共的接口，使得你可以用同一种方式调用所有的事务。同时使用该模式也易于添加新事务以扩展系统。</li>
+</ul>
+<h3 id="解析器模式"><a href="#解析器模式" class="headerlink" title="解析器模式"></a>解析器模式</h3><p><strong>意图</strong></p>
+<p><a href="http://baike.baidu.com/pic/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/1212549/0/f703738da977391242caa5d9fa198618377ae29e?fr=lemma&amp;ct=single" target="_blank" rel="external"><img src="http://b.hiphotos.baidu.com/baike/s%3D220/sign=5cbfc84c53da81cb4ae684cf6267d0a4/f703738da977391242caa5d9fa198618377ae29e.jpg" alt="解析器模式"></a>解析器模式</p>
+<p><strong>适用性</strong></p>
+<ul>
+<li><p>当有一个语言需要解释执行, 并且你可将该语言中的句子表示为一个抽象语法树时，可使用解释器模式。而当存在以下情况时该模式效果最好：</p>
+</li>
+<li><ul>
+<li>该文法简单对于复杂的文法, 文法的类层次变得庞大而无法管理。此时语法分析程序生成器这样的工具是更好的选择。它们无需构建抽象语法树即可解释表达式, 这样可以节省空间而且还可能节省时间。</li>
+<li>效率不是一个关键问题最高效的解释器通常不是通过直接解释语法分析树实现的, 而是首先将它们转换成另一种形式。例如，正则表达式通常被转换成状态机。但即使在这种情况下, 转换器仍可用解释器模式实现, 该模式仍是有用的。</li>
+</ul>
+</li>
+</ul>
+<h3 id="迭代器模式"><a href="#迭代器模式" class="headerlink" title="迭代器模式"></a>迭代器模式</h3><p><strong>意图</strong></p>
+<p><a href="http://baike.baidu.com/pic/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/1212549/0/86d6277f9e2f070801b6f2daeb24b899a801f2bd?fr=lemma&amp;ct=single" target="_blank" rel="external"><img src="http://b.hiphotos.baidu.com/baike/s%3D250/sign=263de2ce40a7d933bba8e3769d4ad194/86d6277f9e2f070801b6f2daeb24b899a801f2bd.jpg" alt="img"></a></p>
+<p><strong>适用性</strong></p>
+<ul>
+<li>访问一个聚合对象的内容而无需暴露它的内部表示。</li>
+<li>支持对聚合对象的多种遍历。</li>
+<li>为遍历不同的聚合结构提供一个统一的接口（即, 支持多态迭代）。</li>
+</ul>
+<h3 id="中介模式"><a href="#中介模式" class="headerlink" title="中介模式"></a>中介模式</h3><p><strong>意图</strong></p>
+<p><a href="http://baike.baidu.com/pic/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/1212549/0/94cad1c8a786c917dbce7281cb3d70cf3ac757bc?fr=lemma&amp;ct=single" target="_blank" rel="external"><img src="http://e.hiphotos.baidu.com/baike/s%3D250/sign=43e1856774c6a7efbd26af23cdfbafe9/94cad1c8a786c917dbce7281cb3d70cf3ac757bc.jpg" alt="中介模式"></a>中介模式</p>
+<p><strong>适用性</strong></p>
+<ul>
+<li>一组对象以定义良好但是复杂的方式进行通信。产生的相互依赖关系结构混乱且难以理解。</li>
+<li>一个对象引用其他很多对象并且直接与这些对象通信,导致难以复用该对象。</li>
+<li>想定制一个分布在多个类中的行为，而又不想生成太多的子类。</li>
+</ul>
+<h3 id="备忘录模式"><a href="#备忘录模式" class="headerlink" title="备忘录模式"></a>备忘录模式</h3><p><strong>意图</strong></p>
+<p><a href="http://baike.baidu.com/pic/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/1212549/0/91529822720e0cf3ffc06d430846f21fbe09aa56?fr=lemma&amp;ct=single" target="_blank" rel="external"><img src="http://a.hiphotos.baidu.com/baike/s%3D250/sign=f2be5c652c738bd4c021b534918a876c/91529822720e0cf3ffc06d430846f21fbe09aa56.jpg" alt="备忘录模式"></a>备忘录模式</p>
+<p><strong>适用性</strong></p>
+<ul>
+<li>必须保存一个对象在某一个时刻的(部分)状态, 这样以后需要时它才能恢复到先前的状态。</li>
+<li>如果一个用接口来让其它对象直接得到这些状态，将会暴露对象的实现细节并破坏对象的封装性。</li>
+</ul>
+<h3 id="观察者模式"><a href="#观察者模式" class="headerlink" title="观察者模式"></a>观察者模式</h3><p><strong>意图</strong></p>
+<p><a href="http://baike.baidu.com/pic/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/1212549/0/fc1f4134970a304ebb028342d3c8a786c9175c61?fr=lemma&amp;ct=single" target="_blank" rel="external"><img src="http://g.hiphotos.baidu.com/baike/s%3D250/sign=054d594ad762853596e0d524a0ee76f2/fc1f4134970a304ebb028342d3c8a786c9175c61.jpg" alt="观察者模式"></a>观察者模式</p>
+<p><strong>适用性</strong></p>
+<ul>
+<li>当一个抽象模型有两个方面, 其中一个方面依赖于另一方面。将这二者封装在独立的对象中以使它们可以各自独立地改变和复用。</li>
+<li>当对一个对象的改变需要同时改变其它对象, 而不知道具体有多少对象有待改变。</li>
+<li>当一个对象必须通知其它对象，而它又不能假定其它对象是谁。换言之，你不希望这些对象是紧密耦合的。</li>
+</ul>
+<h3 id="状态模式"><a href="#状态模式" class="headerlink" title="状态模式"></a>状态模式</h3><p><strong>意图</strong></p>
+<p><a href="http://baike.baidu.com/pic/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/1212549/0/d4628535e5dde711e1e3604ea5efce1b9d166150?fr=lemma&amp;ct=single" target="_blank" rel="external"><img src="http://b.hiphotos.baidu.com/baike/s%3D250/sign=b8e6034634d3d539c53d08c60a86e927/d4628535e5dde711e1e3604ea5efce1b9d166150.jpg" alt="状态模式"></a>状态模式</p>
+<p><strong>适用性</strong></p>
+<ul>
+<li>一个对象的行为取决于它的状态, 并且它必须在运行时刻根据状态改变它的行为。</li>
+<li>一个操作中含有庞大的多分支的条件语句，且这些分支依赖于该对象的状态。这个状态通常用一个或多个枚举常量表示。通常, 有多个操作包含这一相同的条件结构。State模式将每一个条件分支放入一个独立的类中。这使得你可以根据对象自身的情况将对象的状态作为一个对象，这一对象可以不依赖于其他对象而独立变化。</li>
+</ul>
+<h3 id="策略模式"><a href="#策略模式" class="headerlink" title="策略模式"></a>策略模式</h3><p><strong>意图</strong></p>
+<p><a href="http://baike.baidu.com/pic/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/1212549/0/faf2b2119313b07e84de73b00ed7912397dd8c22?fr=lemma&amp;ct=single" target="_blank" rel="external"><img src="http://g.hiphotos.baidu.com/baike/s%3D250/sign=73334373b0fb43161e1f7d7f10a54642/faf2b2119313b07e84de73b00ed7912397dd8c22.jpg" alt="策略模式"></a>策略模式</p>
+<p><strong>适用性</strong></p>
+<ul>
+<li>许多相关的类仅仅是行为有异。“策略”提供了一种用多个行为中的一个行为来配置一个类的方法。</li>
+<li>需要使用一个算法的不同变体。例如，你可能会定义一些反映不同的空间/时间权衡的算法。当这些变体实现为一个算法的类层次时，可以使用策略模式。</li>
+<li>算法使用客户不应该知道的数据。可使用策略模式以避免暴露复杂的、与算法相关的数据结构。</li>
+<li>一个类定义了多种行为, 并且这些行为在这个类的操作中以多个条件语句的形式出现。将相关的条件分支移入它们各自的Strategy类中以代替这些条件语句。</li>
+</ul>
+<h3 id="模版模式"><a href="#模版模式" class="headerlink" title="模版模式"></a>模版模式</h3><p><strong>意图</strong></p>
+<p><a href="http://baike.baidu.com/pic/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/1212549/0/4610b912c8fcc3ce71f3ea8b9045d688d43f2052?fr=lemma&amp;ct=single" target="_blank" rel="external"><img src="http://c.hiphotos.baidu.com/baike/s%3D220/sign=52f08fadbe315c6047956cedbdb0cbe6/4610b912c8fcc3ce71f3ea8b9045d688d43f2052.jpg" alt="模板模式"></a>模板模式</p>
+<p><strong>适用性</strong></p>
+<ul>
+<li>一次性实现一个算法的不变的部分，并将可变的行为留给子类来实现。</li>
+<li>各子类中公共的行为应被提取出来并集中到一个公共父类中以避免代码重复。这是Opdyke和Johnson所描述过的“重分解以一般化”的一个很好的例子。首先识别现有代码中的不同之处，并且将不同之处分离为新的操作。最后，用一个调用这些新的操作的模板方法来替换这些不同的代码。</li>
+<li>控制子类扩展。模板方法只在特定点调用“hook”操作，这样就只允许在这些点进行扩展。</li>
+</ul>
+<h3 id="访问者模式"><a href="#访问者模式" class="headerlink" title="访问者模式"></a>访问者模式</h3><p><strong>意图</strong></p>
+<p><a href="http://baike.baidu.com/pic/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/1212549/0/f703738da97739124314a6d9fa198618367ae25c?fr=lemma&amp;ct=single" target="_blank" rel="external"><img src="http://a.hiphotos.baidu.com/baike/s%3D220/sign=5d61cb4c53da81cb4ae684cf6267d0a4/f703738da97739124314a6d9fa198618367ae25c.jpg" alt="访问者模式"></a>访问者模式</p>
+<p><strong>适用性</strong></p>
+<ul>
+<li>一个对象结构包含很多类对象，它们有不同的接口，而你想对这些对象实施一些依赖于其具体类的操作。</li>
+<li>需要对一个对象结构中的对象进行很多不同的并且不相关的操作，而你想避免让这些操作“污染”这些对象的类。Visitor使得你可以将相关的操作集中起来定义在一个类中。当该对象结构被很多应用共享时，用Visitor模式让每个应用仅包含需要用到的操作。</li>
+<li>定义对象结构的类很少改变，但经常需要在此结构上定义新的操作。改变对象结构类需要重定义对所有访问者的接口，这可能需要很大的代价。如果对象结构类经常改变，那么可能还是在这些类中定义这些操作较好。</li>
+</ul>
+
+  </div>
+  <!--评论块-->
+    
+
+</article>
+<nav class="post-nav">
+  <!-- Prev Nav -->
+    
+  <a href="/2017/05/01/继承封装多态/" id="post_nav-newer" class="post-nav-content prev-content">
+      新篇
+  </a>
+    
+
+
+  <!-- Next Nav -->
+    
+  <a href="/2017/04/26/楼下三十三层/" id="post_nav-older" class="post-nav-content next-content">
+      旧篇
+  </a>
+    
+</nav>
+<div class="post-toc-btn"><i class="material-icons">format_list_numbered</i></div>
+<div class="post-toc-none"><p>(无)</p></div>
+<div class="post-toc-box">
+    <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#工厂模式"><span class="post-toc-number">1.</span> <span class="post-toc-text">工厂模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#抽象工厂模式"><span class="post-toc-number">2.</span> <span class="post-toc-text">抽象工厂模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#建造者模式"><span class="post-toc-number">3.</span> <span class="post-toc-text">建造者模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#原型模式"><span class="post-toc-number">4.</span> <span class="post-toc-text">原型模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#单例模式"><span class="post-toc-number">5.</span> <span class="post-toc-text">单例模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#适配器模式"><span class="post-toc-number">6.</span> <span class="post-toc-text">适配器模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#桥接模式"><span class="post-toc-number">7.</span> <span class="post-toc-text">桥接模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#组合模式"><span class="post-toc-number">8.</span> <span class="post-toc-text">组合模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#装饰模式"><span class="post-toc-number">9.</span> <span class="post-toc-text">装饰模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#门面模式"><span class="post-toc-number">10.</span> <span class="post-toc-text">门面模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#享元模式"><span class="post-toc-number">11.</span> <span class="post-toc-text">享元模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#代理模式"><span class="post-toc-number">12.</span> <span class="post-toc-text">代理模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#职责链模式"><span class="post-toc-number">13.</span> <span class="post-toc-text">职责链模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#命令模式"><span class="post-toc-number">14.</span> <span class="post-toc-text">命令模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#解析器模式"><span class="post-toc-number">15.</span> <span class="post-toc-text">解析器模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#迭代器模式"><span class="post-toc-number">16.</span> <span class="post-toc-text">迭代器模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#中介模式"><span class="post-toc-number">17.</span> <span class="post-toc-text">中介模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#备忘录模式"><span class="post-toc-number">18.</span> <span class="post-toc-text">备忘录模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#观察者模式"><span class="post-toc-number">19.</span> <span class="post-toc-text">观察者模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#状态模式"><span class="post-toc-number">20.</span> <span class="post-toc-text">状态模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#策略模式"><span class="post-toc-number">21.</span> <span class="post-toc-text">策略模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#模版模式"><span class="post-toc-number">22.</span> <span class="post-toc-text">模版模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#访问者模式"><span class="post-toc-number">23.</span> <span class="post-toc-text">访问者模式</span></a></li></ol>
+</div>
+<!--<div class="post-back"><i class="material-icons">arrow_back</i></div>-->
+<script type="text/javascript">
+    menu();
+</script>
+  </div>
+</div>
+<div id="bottom-outer">
+  <div id="bottom-inner">
+    <a  id="top-button" onfocus="this.blur();"><div class="up upinbody" style="background-color:#26A69A"><i class="material-icons material-up">vertical_align_top</i></div></a>
+
+
+<p >Copyright ©  2017  Hexo</p>
+<p >Powered by <a href="https://hexo.io/" target="_blank"> Hexo </a> & Theme - <a href="https://github.com/moumao/hexo-theme-Vateral" target="_blank">Vateral</a></p>
+<p style="font-size: 10px" id="footer-times" data-time="9/9/2013 00:00:00"></p>
+<script>
+    var beginTime=document.getElementById("footer-times").dataset.time
+    function show_date_time(){
+        var span=document.getElementById("footer-times")
+        window.setTimeout("show_date_time()", 1000);
+        BirthDay=new Date(beginTime);//初始日期
+        today=new Date();
+        timeold=(today.getTime()-BirthDay.getTime());
+        sectimeold=timeold/1000
+        secondsold=Math.floor(sectimeold);
+        msPerDay=24*60*60*1000
+        e_daysold=timeold/msPerDay
+        daysold=Math.floor(e_daysold);
+        e_hrsold=(e_daysold-daysold)*24;
+        hrsold=Math.floor(e_hrsold);
+        e_minsold=(e_hrsold-hrsold)*60;
+        minsold=Math.floor((e_hrsold-hrsold)*60);
+        seconds=Math.floor((e_minsold-minsold)*60);
+        span.innerHTML="本站已运行"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
+    }
+    show_date_time();
+</script>
+
+  </div>
+</div>
+
+<!--影集界面需要的资源-->
+
+
+
+<!-- scripts list from theme config.yml -->
+
+<script src="/js/jquery-3.1.1.min.js"></script>
+
+<script src="/js/materialize.min.js"></script>
+
+<script src="/js/main.min.js"></script>
+
+
+<script>
+    NProgress.start();
+    NProgress.done();
+    lazy();
+    links();
+    window.onpopstate = menu();
+    //pjax操作
+    $(document).pjax('a:not(.nopjax)', '#content-inner', {fragment:'#content-inner', timeout:8000});
+    $(document).on('pjax:start', NProgress.start).on('pjax:end', NProgress.done)
+        .on('pjax:end', () => {
+            dowmdiv();
+            lazy();
+            toc();
+            links();
+            menu();
+        });
+</script>
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+</body>
+</html>
